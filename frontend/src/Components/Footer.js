@@ -8,7 +8,7 @@ import kakao from'../assets/kakaoLogo.png';
 export default () => (
 	<div>
 		<footer role="contentinfo" id="footer" className="l-footer">
-			<div className="l-section-holder l-footer-holder footer-widget-group">
+			<div className="l-section-holder l-footer-holder footer-widget-group" style={{paddingTop: "25px", paddingBottom: "25px"}}>
 				<div id="contacts" className="footer-widget">
                     <h2 className="footer-heading">Contacts</h2>
                     <div className="footer-content">

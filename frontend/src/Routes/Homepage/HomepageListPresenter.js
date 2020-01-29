@@ -2,6 +2,7 @@ import React, { useEffect, useCallback, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { PROJECT_HOMEPAGE_REQUEST, PROJECT_MORE_REQUEST } from '../../store/reducers/user';
 import { useParams } from 'react-router-dom';
+import { Icon } from 'antd';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import HomeImgList from "./HomeImgList"
@@ -44,6 +45,12 @@ const HomepageListPresenter = ({data}) => {
 	
 	return (
 		<>	
+			<Link to="/">
+				<div style={{fontSize: "48px", position: "absolute", top: "17px", right: "15px", float: "right", color: "white"}}>
+					<Icon type="home" theme="filled" />
+				</div>			
+			</Link>
+			
 			{data.map((v) => v.img != null && <HomeImgList img={v.img} title={v.title}/>)}
 			
 		</>

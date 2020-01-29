@@ -23,6 +23,59 @@ module.exports.dataInfo = function(callback){
 	})
 }
 
+module.exports.mobileDataInfo = function(lastId, limit, callback){
+	pool.getConnection(function(err, connection){
+		lastId = Number(lastId);
+		limit = Number(limit);
+		
+		if(err){
+			console.log(err);
+			callback(false);
+			return;
+		}
+		var query = "SELECT * FROM tbl_mainimg WHERE seq > ? ORDER BY seq DESC LIMIT 0, ?";
+	
+		connection.query(query, [lastId, limit], function(err,result){
+			connection.release()
+
+			if(err){
+				console.log(err);
+				callback(false)
+			}
+
+			callback(result)
+		})
+	})
+}
+
+module.exports.mobileMoreList = function(lastId, limit, callback){
+	pool.getConnection(function(err, connection){
+		lastId = Number(lastId);
+		limit = Number(limit);
+		
+		console.log(lastId)
+		console.log(limit)
+
+		if(err){
+			console.log(err);
+			callback(false);
+			return;
+		}
+		var query = "SELECT * FROM tbl_mainimg WHERE seq < ? ORDER BY seq DESC LIMIT 0, ?";
+	
+		connection.query(query, [lastId, limit], function(err,result){
+			connection.release()
+
+			if(err){
+				console.log(err);
+				callback(false)
+			}
+
+			callback(result)
+		})
+	})
+}
+
 module.exports.logoInfo = function(callback){
 	
 	pool.getConnection(function(err, connection){

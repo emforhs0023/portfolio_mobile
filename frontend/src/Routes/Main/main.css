@@ -39,3 +39,16 @@
     margin-right: 2rem;
     box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);*/
 }
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 450px) {
+    .frontEnd {
+	    float: left;
+	    width: 100%;
+	    font-size: 32px;
+	}
+	.profileData{
+		font-size: 58px;
+		font-weight: 600;
+	}
+}

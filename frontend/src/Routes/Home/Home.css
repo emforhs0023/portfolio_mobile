@@ -224,3 +224,64 @@ figure {
 #aa{
     float: right;
 }
+
+.mobile-section-content{
+    margin-left: auto;
+    max-width: 35em;
+    margin-top: 5rem;
+    font-size: 20px;
+}
+#mobile_myself {
+    background: #1895c5;
+    text-align: right;
+    color: white;
+    width: 100%;
+    padding: 15vh 100px;
+    position: relative;
+    box-sizing: border-box;
+}
+#mobile_skills {
+    background: #1ca8dd;
+    text-align: right;
+    color: white;
+    width: 100%;
+    padding: 15vh 100px;
+    position: relative;
+    box-sizing: border-box;
+}
+.mobile_primary {
+    display: block;
+    font-size: 100px;
+    padding-bottom: .25em;
+    position: relative;
+}
+#mobileButton{
+    height: 100px;
+    margin-top: 75px;
+    min-width: 32%;
+    padding: 0 23.1111111111px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    background-color: #fb8c00  !important;
+    border-color: #fb8c00  !important;
+    will-change: box-shadow;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 20px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-weight: 500;
+}
+#mobileMore{
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    font-weight: 500;
+    text-indent: 0.0892857143em;
+    text-transform: uppercase;
+    font-size: 47px;
+
+}

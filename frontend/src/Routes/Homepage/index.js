@@ -34,7 +34,6 @@ const Homepage = () => {
 				<Containar>
 					<div>
 						<HomepageListPresenter data={homepageList} loading ={loading}/>
-
 					</div>
 				</Containar>	
 			}

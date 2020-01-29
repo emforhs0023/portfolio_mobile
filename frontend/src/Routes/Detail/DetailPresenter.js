@@ -175,7 +175,13 @@ const soosang1 = [{"seq":"0", "text":"logo.png"}];
 const soosang2List = [{"seq":"0", "text":"html5.png"}, {"seq":"1","text":"css.png"},{"seq":"2", "text":"jquery.png"}, {"seq":"3","text":"js.png"}, {"seq":"4","text":"php.png"}];
 const soosang2 = [{"seq":"0", "text":"logo.png"}];
 
-const DetailPresenter = ({ seq, projectName, text, thumbnail, contentImg, backImg, firstDate, lastDate }) => {
+const mockChartList = [{"seq":"0", "text":"html5.png"}, {"seq":"1","text":"css.png"},{"seq":"2", "text":"jquery.png"}, {"seq":"3","text":"js.png"}, {"seq":"4","text":"mysql.png"}, {"seq":"5","text":"node.png"}];
+const mockChart = [{"seq":"0", "text":"logo.png"}];
+
+const jjinipiaList = [{"seq":"0", "text":"html5.png"}, {"seq":"1","text":"css.png"}, {"seq":"2","text":"js.png"}, {"seq":"3","text":"mysql.png"}, {"seq":"4","text":"react.png"}, {"seq":"5","text":"redux.png"}, {"seq":"6","text":"reduxSaga.png"}, {"seq":"7","text":"node.png"}];
+const jjinipia = [{"seq":"0", "text":"logo.png"}];
+
+const DetailPresenter = ({ seq, projectName, text, thumbnail, participants, engagement, contentImg, backImg, firstDate, lastDate }) => {
 	const { project, loading } = useSelector(state => state.user);
 	const params = useParams();
 	
@@ -214,6 +220,12 @@ const DetailPresenter = ({ seq, projectName, text, thumbnail, contentImg, backIm
 								({lastDate ? moment(lastDate).format('YYYY.MM.DD') : moment(lastDate).format('YYYY.MM.DD')})
 							</Date> 
 						}
+						<div style={{clear: "both", marginBottom: "10px"}}>
+							<h4 className="participantsZoon">참여 인원 : </h4> <span className="participantsZoon">{participants}</span> <h4 className="participantsZoon"> 기여도 :</h4> <span className="participantsZoon">{engagement}</span>
+						</div>
+
+						<br/>
+
 						<Item className="explanation">
 							{text}
 						</Item>
@@ -275,6 +287,21 @@ const DetailPresenter = ({ seq, projectName, text, thumbnail, contentImg, backIm
 									))}	
 								</Production>
 							)}
+							{projectName == "MockChart" &&(
+								<Production>
+									{mockChartList.map(data => (
+										<Image  key={data.seq} bgUrl={data.text ? require('../../assets/language/'+ `${data.text}`) :  require("../../assets/noPosterSmall.png")}/> 
+									))}	
+								</Production>
+							)}
+							{projectName == "Jjinipia" &&(
+								<Production>
+									{jjinipiaList.map(data => (
+										<Image  key={data.seq} bgUrl={data.text ? require('../../assets/language/'+ `${data.text}`) :  require("../../assets/noPosterSmall.png")}/> 
+									))}	
+								</Production>
+							)}
+
 						</ItemContainar>
 						<ItemContainar>
 							<h2>사용 처</h2>
@@ -334,11 +361,27 @@ const DetailPresenter = ({ seq, projectName, text, thumbnail, contentImg, backIm
 									))}	
 								</Production>
 							)}
+							{projectName == "MockChart" &&(
+								<Production>
+									{mockChart.map(data => (
+										<Image  key={data.seq} bgUrl={data.text ? require('../../assets/mockChart/'+ `${data.text}`) :  require("../../assets/noPosterSmall.png")}/> 
+									))}	
+								</Production>
+							)}
+							{projectName == "Jjinipia" &&(
+								<Production>
+									{jjinipia.map(data => (
+										<Image  key={data.seq} bgUrl={data.text ? require('../../assets/mockChart/'+ `${data.text}`) :  require("../../assets/noPosterSmall.png")}/> 
+									))}	
+								</Production>
+							)}
+							
+							
 						</ItemContainar>
 						<div>
 							<Link to={"/"}>
 								<Repos>
-									돌아가기
+									Home
 								</Repos>
 							</Link>
 							<Repos>

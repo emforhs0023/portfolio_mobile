@@ -19,7 +19,12 @@
     background-color: black;
     color: white;
 }
-
+.participantsZoon{
+    float: left;
+}
+.participantsZoon:not(:first-child){
+    margin-left: 10px;
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 450px) {
     .titleFont{
         float: left;
@@ -30,7 +35,7 @@
         left: -0.05em;
         vertical-align: -0.1em;
         line-height: 1;
-        font-size: 64px;
+        font-size: 100px;
         font-weight: 400;
         content: counter(article,decimal-leading-zero);
     }

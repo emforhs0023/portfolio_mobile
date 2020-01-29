@@ -35,7 +35,7 @@ const MainBody = () => {
 	                    <figure>
 	                        <figcaption className="list-caption">HTML</figcaption>
 	                        <ul className="skill-list ">
-	                            <li><Icon type="file-done" /> HTML5 및 XHTML 페이지 하드코딩</li>
+	                            <li><Icon type="file-done" /> HTML5 코딩 제작</li>
 	                            <li><Icon type="file-done" /> 모바일 페이지 제작</li>
 	                        </ul>
 	                    </figure>
@@ -43,10 +43,17 @@ const MainBody = () => {
 	                    <figure>
 	                        <figcaption className="list-caption">JavaScript</figcaption>
 	                        <ul className="skill-list ">
-	                            <li><Icon type="file-done" /> Vanilla JavaScript (ES6 활용 가능)</li>
+	                            <li><Icon type="file-done" /> JavaScript (ES6 활용 가능)</li>
 	                            <li><Icon type="file-done" /> jQuery 1~3, jQuery UI</li>
 	                            <li><Icon type="file-done" /> AJAX</li>
 	                            <li><Icon type="file-done" /> AXIOS</li>
+	                        </ul>
+	                    </figure>
+						
+						<figure>
+	                        <figcaption className="list-caption">PHP</figcaption>
+	                        <ul className="skill-list ">
+	                            <li><Icon type="file-done" /> PHP 이용하여 REST api 가능</li>
 	                        </ul>
 	                    </figure>
 
@@ -56,6 +63,17 @@ const MainBody = () => {
 	                            <li><Icon type="file-done" /> express을 사용하여 웹서버 구현 가능</li>
 	                            <li><Icon type="file-done" /> backend와 frontend 연동 가능</li>
 	                            <li><Icon type="file-done" /> HTTP 구조로 request, response 가능</li>
+	                            <li><Icon type="file-done" /> MQTT 통신 개발 가능</li>
+	                            <li><Icon type="file-done" /> Socket.io 개발 가능</li>
+	                        </ul>
+	                    </figure>
+						
+						<figure>
+	                        <figcaption className="list-caption">MySql</figcaption>
+	                        <ul className="skill-list ">
+	                            <li><Icon type="file-done" /> database 설계 가능</li>
+	                            <li><Icon type="file-done" /> MySql 스케줄러 가능</li>
+	                            <li><Icon type="file-done" /> query 가능</li>
 	                        </ul>
 	                    </figure>
 
@@ -66,13 +84,14 @@ const MainBody = () => {
 	                            <li><Icon type="file-done" /> CSS</li>
 	                            <li><Icon type="file-done" /> Javascript</li>
 	                            <li><Icon type="file-done" /> Jquery</li>
+	                            <li><Icon type="file-done" /> PHP</li>
 	                            <li><Icon type="file-done" /> Node.js</li>
 	                            <li><Icon type="file-done" /> Mysql</li>
 	                            <li><Icon type="file-done" /> Vue.js</li>
 	                            <li><Icon type="file-done" /> React.js</li>
 	                            <li><Icon type="file-done" /> Next.js</li>
 	                            <li><Icon type="file-done" /> Redux</li>
-	                            <li><Icon type="file-done" /> Redux-Sass</li>
+	                            <li><Icon type="file-done" /> Redux-Saga</li>
 	                        </ul>
 	                    </figure>
 	                </div>

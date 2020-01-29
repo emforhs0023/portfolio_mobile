@@ -8,7 +8,23 @@ router.get("/api/dataInfo", (req, res, next) => {
 	})
 })
 
+router.get("/api/mobileDataInfo", (req, res, next) => {
+	const lastId = req.query.lastId
+	const limit = req.query.limit
+	
+	db.mobileDataInfo(lastId, limit, (result) => {
+		res.send(result)
+	})
+})
 
+router.get("/api/mobile/more", (req, res, next) => {
+	const lastId = req.query.lastId
+	const limit = req.query.limit
+
+	db.mobileMoreList(lastId, limit, (result) => {
+		res.send(result)
+	})	
+})
 
 router.get("/api/logoInfo", (req, res, next) => {
 	db.logoInfo((result) => {

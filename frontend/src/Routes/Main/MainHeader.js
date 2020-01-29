@@ -160,7 +160,7 @@ const MainHeader = () => {
 							</Link>
 						</div>
 						<Item className="frontEnd">
-							Front-end Developer
+							Front-end Developer / backend developer (Full stack)
 						</Item>
 						<ItemContainar className="left">
 							<div className="profileData">

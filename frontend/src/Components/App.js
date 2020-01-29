@@ -11,7 +11,7 @@ const App = () => {
 				<GlobalStyles />
 				<Router />
 			</div>
-			<div>
+			<div style={{marginTop: "10px"}}>
 				<Footer />
 			</div>
 		</div>
